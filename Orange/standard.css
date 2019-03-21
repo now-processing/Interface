@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Montserrat', sans-serif;
+   font-size: xx-large;
+   scroll-behavior: smooth;
+}
+
+h1 {
+   margin: 0;
+}
+
+h2 {
+   margin: 0;
+   margin-top: 2.1vmin;
+   font-size: 1.25em;
+   text-shadow: 0.05em 0.05em 0.025em #fff;
+}
+
+.hilite {
+   color: orange;
+   text-shadow: 0.05em 0.05em 0.025em #444;
+}
+
+.title {
+   position: fixed;
+   top: 0;
+   left: 2vw;
+   z-index: 10;
+   white-space: nowrap;
+}
+
+.title img {
+   height: 1em;
+   vertical-align: middle;
+   transform: rotateY(0);
+   transition: transform 1s ease;
+}
+
+.title img:hover {
+   transform: rotateY(360deg);
+}
+
+.links {
+  position: fixed;
+  bottom: 1em;
+  right: 0.5em;
+  z-index: 10;
+  font-size: 1.25em;
+  height: auto;
+}
+
+.links a {
+   display: inline-block;
+   text-decoration: none;
+   color: orange;
+   text-shadow: 0.05em 0.05em 0.025em #444;
+   margin-right: 0.5em;
+   vertical-align: bottom;
+   transition: all 250ms ease;
+}
+
+.links a:hover {
+   padding-bottom: 0.5em;
+}
+
+p {
+   margin: 0;
+   color: orange;
+   font-size: 0.9em;
+}
+
+.schedule {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   z-index: -1;
+   transform: translate(-50%, -50%);
+   width: 50vmax;
+   max-height: 60vmax;
+
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly, space-around;
+   text-overflow: clip;
+
+   padding: 0.5em 0.75em;
+   background: rgba(0, 0, 0, 0.8);
+   border: 0.1em ridge orange;
+   border-radius: 0.5em;
+   font-size: xx-large;
+
+   opacity: 0;
+   transition: opacity 0.5s ease;
+}
+
+.episode {
+   display: grid;
+   grid-template-columns: 8ch 1fr auto;
+}
+
+.close {
+   position: absolute;
+   top: -0.5em;
+   right: -0.5em;
+   width: 1em;
+}
+
+label {
+   cursor: pointer;
+}
+
+#schedule {
+   display: none;
+}
+
+#schedule:checked ~ .schedule {
+   opacity: 1;
+   z-index: 5;
+}
+
+.contact {
+   position: fixed;
+   left: -100vh;
+ top: 50%;
+   z-index: 5;
+   transform: translateY(-50%) rotateZ(0);
+   display: flex;
+
+   font-size: xx-large;
+   background: rgba(0, 0, 0, 0.8);
+   border: 0.1em ridge orange;
+   border-radius: 0.5em;
+   padding: 1em;
+
+   transition: all 0.5s ease;
+}
+
+.contact > a:first-child {
+   text-decoration: underline;
+}
+
+.contact > a {
+   margin: 0.5em;
+   text-shadow: none;
+}
+
+#contact {
+   display: none;
+}
+
+#contact:checked ~ .contact {
+   left: 50%;
+   transform: translate(-50%, -50%) rotateZ(720deg);
+}
+
+section {
+   width: 100%;
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   position: relative;
+}
+
+#home {
+   background-image: url('../images/playful-kitten-6683.jpg');
+}
+
+#about {
+   background-image: url('../images/kitten-flying.jpg');
+}
+
+.quote {
+   position: absolute;
+   top: 15vmin;
+   left: 13.25em;
+   width: 28vmax;
+   text-shadow: 0.05em 0.05em 0.025em #fff;
+}
+
+.paw {
+   position: absolute;
+   bottom: -0.25em;
+   left: -100vw;
+
+   transition: left 150ms ease;
+}
+
+/* This is a pure css approach to the paw hover effect.*/
+/*Note the paw does not 'slide' from link to link, but it feels*/
+/*tighter than the jQuery approach. */
+
+.links a::after {
+   content: url('../images/pawprint.png');
+   display: block;
+   margin-top: -0.15em;
+   margin-bottom: -1.05em;
+   text-align: center;
+   bottom: -0.5em;
+   opacity: 0;
+   width: 100%;
+   transition: all 250ms ease;
+}
+
+.links, a:hover::after {
+   opacity: 1;
+}
+
+.paw {
+   display: none !important;
+}

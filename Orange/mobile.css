@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    background: #333;
+}
+
+section {
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+}
+
+#home {
+    background-image: url('../images/kitten-v.jpg');
+    background-position: center top;
+}
+
+#about {
+    background-image: url('../images/kitten-flying-v.jpg');
+    background-position: center bottom;
+}
+
+.contact {
+    flex-direction: column;
+    align-items: center;
+}
+
+.paw {
+    display: none !important;
+}
+
+.links {
+    font-size: 1.5em;
+}
+
+.links a:active {
+    margin-bottom: 0.5em;
+}
+
+.close {
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    width: 2em;
+}
+
+.contact {
+    flex-direction: column;
+}
+
+label {
+    cursor: pointer;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="standard.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (orientation: portrait)">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <title>Orange is the New Cat</title>
+</head>
+<body>
+
+    <div class="title">
+        <h1><span class="hilite">Orange </span>is the new <span class="hilite">Cat</span></h1>
+        <h2>only on <img src="images/netflix.png" alt="netflix icon"></h2>
+    </div>
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+
+<!-- I am using an input with labels to allow me to require less jQuery. This way I can select
+ the sibling schedule div and enable toggling via the #schedule:checked ~ .schedule selector. I took a similar
+ approach with the contact popup.-->
+        <input type="checkbox" id="schedule">
+        <div class="schedule">
+                <div class="episode">
+                    <p class="episode-title">
+                        Silly Kitty
+                    </p>
+                    <p>
+                        The first episode in which we meet a very silly kitty.
+                    </p>
+                    <p>
+                        07/05/2016
+                    </p>
+                </div>
+
+                <div class="episode">
+                    <p class="episode-title">
+                        Trouble in Orange
+                    </p>
+                    <p>
+                        Silly kitty gets lost and spends the night in kitty lockup.
+                    </p>
+                    <p>
+                        07/12/2016
+                    </p>
+                </div>
+
+                <div class="episode">
+                    <p class="episode-title">
+                        Claws of Fury
+                    </p>
+                    <p>
+                        Ninja cat attacts the home and silly kitty must defend his family!
+                    </p>
+                    <p>
+                        07/19/2016
+                    </p>
+                </div>
+            <label for="schedule"><img class="close" src="images/close.png"></label>
+        </div>
+        <a href="#"><label for="schedule">Schedule</label></a>
+
+        <input type="checkbox" id="contact">
+        <div class="contact">
+            <a href="tel:402-555-5555">(402) 555-5555</a>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <label for="contact"><img class="close" src="images/close.png"></label>
+        </div>
+        <a href="#"><label for="contact">Contact</label></a>
+        <img class="paw" src="images/pawprint.png" alt="pawprint icon">
+    </div>
+    <section id="home"></section>
+    <section id="about">
+        <div class="quote">
+            Kitty is no ordinary kitten. He's a super-hero, too!
+        </div>
+    </section>
+</body>
+</html>
